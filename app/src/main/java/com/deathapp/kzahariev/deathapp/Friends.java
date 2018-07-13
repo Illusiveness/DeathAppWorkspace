@@ -11,7 +11,7 @@ public class Friends extends AppCompatActivity {
 
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+    private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
@@ -20,12 +20,14 @@ public class Friends extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_settings:
+                    mTextMessage.setText(R.string.title_activity_settings);
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_friends:
+                    mTextMessage.setText(R.string.title_activity_friends);
                     return true;
+                case R.id.navigation_testaments:
+                    mTextMessage.setText(R.string.title_activity_testaments);
             }
             return false;
         }
