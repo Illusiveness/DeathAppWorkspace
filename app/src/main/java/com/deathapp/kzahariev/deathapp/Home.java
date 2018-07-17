@@ -1,10 +1,13 @@
 package com.deathapp.kzahariev.deathapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
@@ -42,5 +45,11 @@ public class Home extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+    public void openSettings(View v){
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
 
 }
