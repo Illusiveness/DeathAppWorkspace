@@ -1,5 +1,6 @@
 package com.deathapp.kzahariev.deathapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,16 +19,25 @@ public class Settings extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Intent intent = new Intent(Settings.this, Home.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText(R.string.title_activity_settings);
+                    intent = new Intent(Settings.this, Settings.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_friends:
-                    mTextMessage.setText(R.string.title_activity_friends);
+                    intent = new Intent(Settings.this, Friends.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_testaments:
-                    mTextMessage.setText(R.string.title_activity_testaments);
+                    intent = new Intent(Settings.this, Testaments.class);
+                    startActivity(intent);
+                    finish();
+                    return true;
             }
             return false;
         }

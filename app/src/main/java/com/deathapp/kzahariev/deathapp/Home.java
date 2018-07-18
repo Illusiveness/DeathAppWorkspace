@@ -21,16 +21,25 @@ public class Home extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Intent intent = new Intent(Home.this, Home.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText(R.string.title_activity_settings);
+                    intent = new Intent(Home.this, Settings.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_friends:
-                    mTextMessage.setText(R.string.title_activity_friends);
+                    intent = new Intent(Home.this, Friends.class);
+                    startActivity(intent);
+                    finish();
                     return true;
                 case R.id.navigation_testaments:
-                    mTextMessage.setText(R.string.title_activity_testaments);
+                    intent = new Intent(Home.this, Testaments.class);
+                    startActivity(intent);
+                    finish();
+                    return true;
             }
             return false;
         }
