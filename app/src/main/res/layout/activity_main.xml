@@ -8,7 +8,6 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="50dp">
 
-
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
         android:layout_width="0dp"
@@ -20,11 +19,12 @@
         android:layout_marginRight="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="320dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </android.support.constraint.ConstraintLayout>

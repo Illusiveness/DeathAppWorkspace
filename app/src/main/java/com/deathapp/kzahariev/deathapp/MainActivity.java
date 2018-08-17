@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     private CallbackManager FBCallBackManager;
     private boolean isMainLobbyStarted = false;
+    private LoginButton fb_connect;
+    private LinearLayout mfb_connect;
+
 
 
     @Override
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
     AccessToken accessToken = AccessToken.getCurrentAccessToken();
     boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+
 }
 
 
